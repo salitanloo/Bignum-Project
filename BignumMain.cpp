@@ -151,7 +151,6 @@ public:
         cnt=(cnt+1)>>1;
         reverse(a+1,a+cnt+1);
         for(int i=cnt;i>=1;i--){
-            //cout<<42<<endl;
             for(int j=i+1;j<=cnt;j++){
                 int c=j-(i+1);
                 if(c&1)
@@ -159,7 +158,6 @@ public:
                 else
                     temp[i+(c/2)]+=ans[j]*20;
             }
-            //cout<<50<<endl;
             for(int j=i+1;j<=cnt+1;j++)
                 temp[j]+=temp[j-1]/100,temp[j-1]%=100;
             temp[i]+=10;
